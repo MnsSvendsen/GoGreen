@@ -3,6 +3,16 @@
     (click)= "menuService.showingLeftSideMenu = false">
   <i class="icon {{item.icon}}"></i>
   <span>{{item.text.toUpperCase() }}</span>
+
+<span *ngIf="item.submenu && !parentIsPopup && !menuService.isVertical" 
+  class="icon fas fa-chevron-down"></span>
+<span *ngIf="item.submenu && parentIsPopup && !menuService.isVertical" 
+  class="icon fas fa-angle-right"></span>
+<span *ngIf="item.submenu && menuService.isVertical && !(mouseInPopup || mouseInItem)" 
+  class="icon fas fa-angle-left"></span> 
+<span *ngIf="item.submenu && menuService.isVertical && (mouseInPopup || mouseInItem)" 
+  class="icon fas fa-chevron-down"></span> 
+
 </div>
 <fw-popup-menu
     *ngIf="mouseInPopup || mouseInItem" 

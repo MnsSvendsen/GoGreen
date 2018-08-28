@@ -34,11 +34,15 @@ span {
     pointer-events: none;
 }
 
-.glyphicon {
+.icon {
     top: 1px;
     font-size: 14px;
     margin-right: 4px;
     margin-left: 8px;
+}
+
+.fa-angle-left, .fa-angle-right, .fa-chevron-down {
+    float: right;
 }
 
 .menu-item {

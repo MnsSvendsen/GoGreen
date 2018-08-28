@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, HostBinding, HostListener, ElementRef, Renderer } from '@angular/core';
+import {Component, OnInit, Input, HostBinding, HostListener, 
+        ElementRef, Renderer,} from '@angular/core';
+import {trigger, state, style, transition, animate } from '@angular/animations'
 
 import {MenuItem, MenuService} from '../../services/menu.service'
 import { Router, NavigationEnd } from '@angular/router';
@@ -7,8 +9,20 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'fw-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [
+      trigger('visibilityChanged', [
+          transition(':enter',[
+              style({opacity:0}),
+              animate(100, style({opacity:1}))
+          ]),
+          transition(':leave', [
+              animate(100, style({opacity:0}))
+          ])
+      ])
+  ]
 })
+
 export class MenuItemComponent implements OnInit {
   @Input() item = <MenuItem>null;  // see angular-cli issue #2034
   @HostBinding('class.parent-is-popup')
