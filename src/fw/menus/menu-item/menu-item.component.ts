@@ -11,16 +11,16 @@ import { Router, NavigationEnd } from '@angular/router';
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
   animations: [
-      trigger('visibilityChanged', [
-          transition(':enter',[
-              style({opacity:0}),
-              animate(100, style({opacity:1}))
-          ]),
-          transition(':leave', [
-              animate(100, style({opacity:0}))
-          ])
-      ])
-  ]
+    trigger('visibilityChanged', [
+        transition(':enter', [   // :enter is alias to 'void => *'
+            style({opacity:0}),
+            animate(250, style({opacity:1})) 
+        ]),
+        transition(':leave', [   // :leave is alias to '* => void'
+            animate(100, style({opacity:0})) 
+        ])
+    ])
+]
 })
 
 export class MenuItemComponent implements OnInit {
