@@ -10,7 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
   selector: 'fw-menu-item',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
-  animations: [
+/*   animations: [
     trigger('visibilityChanged', [
         transition(':enter', [   // :enter is alias to 'void => *'
             style({opacity:0}),
@@ -20,7 +20,7 @@ import { Router, NavigationEnd } from '@angular/router';
             animate(100, style({opacity:0})) 
         ])
     ])
-]
+] */
 })
 
 export class MenuItemComponent implements OnInit {
