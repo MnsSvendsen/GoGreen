@@ -4,7 +4,7 @@ export let initialMenuItem: Array<MenuItem> = [
     {
         text: 'Dashboard',
         icon: 'fas fa-home',
-        route: '/dashboard',
+        route: '/authenticated/dashboard',
         submenu: null
     },
     {
@@ -20,19 +20,19 @@ export let initialMenuItem: Array<MenuItem> = [
                     {
                         text: 'Usa',
                         icon: 'far fa-flag',
-                        route: 'country-detail/USA',
+                        route: '/authenticated/country-detail/USA',
                         submenu: null
                     },
                     {
                         text: 'India',
                         icon: 'far fa-flag',
-                        route: 'country-detail/India',
+                        route: '/authenticated/country-detail/India',
                         submenu: null
                     },
                     {
                         text: 'Switzerland',
                         icon: 'far fa-flag',
-                        route: 'country-detail/Switzerland',
+                        route: '/authenticated/country-detail/Switzerland',
                         submenu: null
                     }
                 ]
@@ -40,19 +40,19 @@ export let initialMenuItem: Array<MenuItem> = [
             {
                 text: 'Top 3',
                 icon: 'far fa-flag',
-                route: 'country-list/3',
+                route: '/authenticated/country-list/3',
                 submenu: null
             },
             {
                 text: 'Top 10',
                 icon: 'far fa-flag',
-                route: 'country-list/10',
+                route: '/authenticated/country-list/10',
                 submenu: null
             },
             {
                 text: 'All',
                 icon: 'far fa-flag',
-                route: 'country-list/0',
+                route: '/authenticated/country-list/0',
                 submenu: null
             }
         ]
@@ -65,13 +65,13 @@ export let initialMenuItem: Array<MenuItem> = [
             {
                 text: 'Country List',
                 icon: 'fas fa-archive',
-                route: 'country-maint',
+                route: '/authenticated/country-maint',
                 submenu: null
             },
             {
                 text: 'Settings',
                 icon: 'fas fa-cog',
-                route: 'settings',
+                route: '/authenticated/settings',
                 submenu: null
             }
         ]
