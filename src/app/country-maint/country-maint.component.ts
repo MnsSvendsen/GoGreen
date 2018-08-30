@@ -29,14 +29,14 @@ export class CountryMaintComponent {
   createCountry() {
     this.router.navigate(['/authenticated/country-detail', 0, 'create']);
   }
-/* 
+
   deleteCountry(id: number) {
     this.isDeleting = true;
     this.dataService.deleteCountry(id).subscribe(
       c => this.cancelDelete(),
       err => { this.deleteError = err; this.isDeleting = false; }
       );
-  } */
+  } 
 
   deleteCountryQuestion(id:number) {
     this.deleteError = null;
